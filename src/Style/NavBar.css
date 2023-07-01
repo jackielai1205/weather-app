@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+
+.navigation-bar{
+    width: 100vw;
+    height: 10vh;
+    background-color: var(--nav-bar-idle-color);
+    display: flex;
+}
+
+.navigation-bar-item{
+    width: 200px;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    transition: background-color 1s;
+}
+
+.navigation-bar-item-text{
+    top: 20px;
+    position: relative;
+    transition: top 1s;
+    font-size: 20px;
+    color: var(--nav-bar-text);
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.navigation-bar-item:hover{
+    background-color: var(--nav-bar-hover-color);
+}
+
+.navigation-bar-item:hover .navigation-bar-item-text{
+    top: 40px;
+}
+
+.navigation-bar-item.selected .navigation-bar-item-text{
+    top: 40px;
+}
+
+.navigation-bar-item.selected{
+    background-color: var(--nav-bar-selected-color);
+    transition: background-color 0s;
+}

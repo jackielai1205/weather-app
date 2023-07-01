@@ -1,15 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import NavBar from "./Components/NavBar";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import TodayWeatherPage from "./Page/TodayWeatherPage";
+import './index.css';
+import './Style/Page.css';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <div className={"website"}>
+        <NavBar />
+        <div className={"page"}>
+            <BrowserRouter>
+                <Routes>
+                    <Route path={"/today-weather"} element={<TodayWeatherPage />}/>
+                    <Route path={"/home"} element={<div>home</div>}/>
+                </Routes>
+            </BrowserRouter>
+        </div>
+    </div>
   </React.StrictMode>
 );
 

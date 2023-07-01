@@ -1,0 +1,52 @@
+.today-weather-indicator-selected{
+    width: 500px;
+    height: 600px;
+    box-sizing: border-box;
+    transition: width 0.2s, height 0.2s, background-color 2s, rotate 2s;
+}
+
+.today-weather-indicator-unselected{
+    width: 300px;
+    height: 300px;
+    box-sizing: border-box;
+    transition: width 0.2s, height 0.2s, background-color 2s, rotate 2s;
+}
+
+
+.today-weather-indicator-text-selected{
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+    filter: blur(0px);
+    height: inherit;
+}
+
+.today-weather-indicator-text-unselected{
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    filter: blur(0px);
+    height: inherit;
+}
+
+.today-weather-indicator-background{
+    background: var(--component-background);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+    width: inherit;
+    height: inherit;
+    border-radius: 25px;
+}
+
+.today-weather-indicator-footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.today-weather-card{
+    padding: 0 30px;
+    height: inherit;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}

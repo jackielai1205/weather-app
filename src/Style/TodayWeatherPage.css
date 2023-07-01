@@ -1,0 +1,45 @@
+.today-weather-page{
+    width: 100vw;
+    height: 90vh;
+    position: absolute;
+    background: url("https://centralca.cdn-anvilcms.net/media/images/2019/01/02/images/Rainy_Weather_pix.max-1200x675.jpg") no-repeat fixed center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+    /*overflow: hidden;*/
+}
+
+.today-weather-page-background{
+    background: rgba(0, 0, 0, 0.37);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    z-index: 0;
+}
+
+.today-weather-list{
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    justify-content: center;
+    height: inherit;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.today-weather-icon-background{
+    border-radius: 5px;
+    background-color: white;
+}
+
+.today-weather-list-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+    transition:margin-left 0.2s;
+}
