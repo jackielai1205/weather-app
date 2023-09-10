@@ -6,7 +6,7 @@ import {
     ListItem,
     ListItemAvatar,
     ListItemText,
-    ListSubheader, Skeleton, styled, ThemeProvider,
+    ListSubheader, Skeleton, ThemeProvider,
     Typography
 } from "@mui/material";
 import MapIcon from '@mui/icons-material/Map';
@@ -15,11 +15,11 @@ import WbTwilightIcon from '@mui/icons-material/WbTwilight';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import BeachAccessIcon from '@mui/icons-material/BeachAccess';
 import WindPowerIcon from '@mui/icons-material/WindPower';
-import WeatherData from "../Model/WeatherData";
+import {WeatherAllData} from "../API/Model";
 
 interface Props {
     style?: any;
-    weatherData: WeatherData | null;
+    weatherData: WeatherAllData | null;
     selected: boolean;
 
     onClick? : any;
@@ -42,6 +42,17 @@ export default function TodayWeatherIndicator(props : Props){
             const currentHour = today.getHours();
             return weatherData.hourly.temperature_2m[currentHour - 1];
         }
+    }
+
+    const getRegion = function(location:string) : string{
+        let region = location;
+        const dividerPosition : number = region.search("/");
+        if(dividerPosition === -1){
+            throw Error("Invalid format");
+        }
+        region = region.substring((dividerPosition + 1), region.length);
+        region = region.replace("_", " ");
+        return region;
     }
 
     const theme = createTheme({
@@ -166,7 +177,7 @@ export default function TodayWeatherIndicator(props : Props){
                                             <Typography style={selectableSubListItemStyle}>Time Zone</Typography>
                                         } />
                                         <ListItemText primary={
-                                            <Typography style={selectableListItemStyle}>{weatherData.timezone}</Typography>
+                                            <Typography style={selectableListItemStyle}>{getRegion(weatherData.timezone)}</Typography>
                                         } secondary={
                                             <Typography style={selectableSubListItemStyle}>{weatherData.timezone_abbreviation}</Typography>
                                         } />

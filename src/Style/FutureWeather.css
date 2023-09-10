@@ -1,0 +1,57 @@
+.future-weather-card{
+    background-color: var(--component-idle-color);
+    border-radius: 25px;
+    min-width: 300px;
+    height: 500px;
+    margin: 25px;
+}
+
+.future-weather-card-content{
+    
+}
+
+.future-weather-card-title{
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    align-items: center;
+    padding: 0 10px 0 0;
+    display:flex;
+}
+
+.future-weather-card-section{
+    width: inherit;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-weight: 200;
+}
+
+.future-weather-list{
+    display: flex;
+    width: 100vw;
+    overflow-x: scroll;
+    height: inherit;
+    align-items: center;
+    overflow-y: auto;
+}
+
+
+.future-weather-card-row{
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.future-weather-card-row-subtitle-en{
+    color: white;
+    font-size: 16px;
+}
+
+.future-weather-card-row-subtitle-ch{
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 14px;
+}
+
+.future-weather-card-row-data{
+    color: white;
+}

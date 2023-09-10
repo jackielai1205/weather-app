@@ -1,4 +1,4 @@
-.today-weather-page{
+.page-content{
     width: 100vw;
     height: 90vh;
     position: absolute;
@@ -8,17 +8,17 @@
     justify-content: center;
     align-items: center;
     margin-top: 10vh;
-    /*overflow: hidden;*/
+    z-index: -2;
 }
 
-.today-weather-page-background{
+.page-background{
     background: rgba(0, 0, 0, 0.37);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(20px);
     width: inherit;
     height: inherit;
     position: absolute;
-    z-index: 0;
+    z-index: -1;
 }
 
 .today-weather-list{

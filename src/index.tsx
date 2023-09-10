@@ -6,6 +6,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import TodayWeatherPage from "./Page/TodayWeatherPage";
 import './index.css';
 import './Style/Page.css';
+import FutureWeatherPage from "./Page/FutureWeatherPage";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -19,6 +20,7 @@ root.render(
                 <Routes>
                     <Route path={"/today-weather"} element={<TodayWeatherPage />}/>
                     <Route path={"/home"} element={<div>home</div>}/>
+                    <Route path={"/seven-days-weather"} element={<FutureWeatherPage />}/>
                 </Routes>
             </BrowserRouter>
         </div>

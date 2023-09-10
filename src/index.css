@@ -12,4 +12,5 @@ body{
     --nav-bar-hover-color: 	#696969;
     --nav-bar-text: white;
     --nav-bar-selected-color: #505050;
+    --component-idle-color: #808080;
 }

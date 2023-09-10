@@ -1,7 +1,7 @@
-import WeatherData from "../Model/WeatherData";
+import {WeatherAllData} from "../API/Model";
 import TodayWeatherIndicator from "./TodayWeatherIndicator";
 import React, {useState} from "react";
-import {Button, IconButton, Skeleton} from '@mui/material';
+import {IconButton} from '@mui/material';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
@@ -21,14 +21,14 @@ declare module '@mui/material/styles' {
 
 interface Props {
     weathersData: {
-        [key: string]: WeatherData
+        [key: string]: WeatherAllData
     }
 }
 export default function TodayWeatherList(props: Props){
 
     const weathers = props.weathersData;
     const [selectedIndex, setSelectedIndex] = useState<number>(1);
-    const [todayWeatherListPosition, setTodayWeatherListPosition] = useState<number>(25);
+    const [todayWeatherListPosition, setTodayWeatherListPosition] = useState<number>(50);
 
     const moveLeft = () => {
         if(selectedIndex <= 0){
